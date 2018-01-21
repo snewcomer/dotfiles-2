@@ -26,9 +26,9 @@ set noerrorbells                       " Don't beep
 set nowrap                             " Do not wrap lines
 set showbreak=↪\                       " Character to precede line wraps for the times I turn it on
 set popt=left:8pc,right:3pc            " Print options
-set shiftwidth=4                       " Number of spaces to use for each step of indent
+set shiftwidth=2                       " Number of spaces to use for each step of indent
 set showcmd                            " Display incomplete commands in the bottom line of the screen
-set tabstop=4                          " Number of spaces that a <Tab> counts for
+set tabstop=2                          " Number of spaces that a <Tab> counts for
 set expandtab                          " Make vim use spaces and not tabs
 set undolevels=1000                    " Never can be too careful when it comes to undoing
 set hidden                             " Don't unload the buffer when we switch between them. Saves undo history

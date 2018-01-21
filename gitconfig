@@ -10,7 +10,7 @@
     deleted = red
     untracked = yellow
 [user]
-    name = JarrodCTaylor
-    email = jarrod.c.taylor@gmail.com
+	name = snewcomer
+	email = snewcomer24@gmail.com
 [push]
     default = matching
