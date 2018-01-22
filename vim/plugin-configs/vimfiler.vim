@@ -57,7 +57,7 @@ autocmd FileType vimfiler nmap <silent><buffer><expr> <CR> vimfiler#smart_cursor
 "===============================================================================
 " Plugin Keymappings
 "===============================================================================
-nnoremap <silent> <Leader>tr :<C-u>VimFilerExplorer -split -simple -parent -winwidth=35 -toggle -no-quit<CR>
+nnoremap <silent> <Leader>d :<C-u>VimFilerExplorer -split -simple -parent -winwidth=35 -toggle -no-quit<CR>
 nnoremap <silent> <Leader>gr :<C-u>VimFilerExplorer -split -simple -parent -winwidth=35 -no-quit -find<CR>
 
 "===============================================================================
