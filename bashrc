@@ -76,7 +76,7 @@ alias rogue='tmux switch-client -t "pair-session"; tmux display-message "Enterin
 alias buddy='tmux switch-client -t "host-session"; tmux display-message "Entering Buddy Mode"'
 alias delete_pyc='find . -name \*.pyc -exec rm \{\} \+'
 alias c='clear'
-alias nombom="bower cache clean && rm -rf node_modules bower_components && npm install && bower install"
+alias nombom="rm -rf node_modules && npm install"
 alias es='ember s'
 alias em='ember s --environment=mirage-development'
 alias et='ember t -s'
