@@ -184,28 +184,12 @@ workon_virtualenv() {
 # If we cd into a directory that contains a directory named node_modules
 # we automatically add it to the $PATH
 # -------------------------------------------------------------------
-workon_node_env() {
-  if [[ -d "node_modules" ]]; then
-
-    export NPM_ORIGINAL_PATH=$PATH
-    eval NODE_NAME=$(basename $(pwd))
-    export PATH="${PATH}:$(pwd)/node_modules/.bin"
-
-    deactivatenode(){
-      export PATH=$NPM_ORIGINAL_PATH
-      unset -f deactivatenode
-      unset NODE_NAME
-    }
-  fi
-}
 # >>2
 # Run the virtual environments functions for the prompt on each cd <<2
 # -------------------------------------------------------------------
 cd() {
   builtin cd "$@"
-  unset NODE_NAME
   workon_virtualenv
-  workon_node_env
 }
 # >>2
 # >>1
@@ -226,3 +210,7 @@ export PATH=$PATH:$GOPATH/bin
 # >>1
 
 # EOF
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash

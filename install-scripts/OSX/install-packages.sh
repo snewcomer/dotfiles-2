@@ -19,7 +19,6 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
     brew install vim --with-lua
     brew install tig
     brew install aspell
-    brew install node
     brew install reattach-to-user-namespace
     brew install tmux
     brew install the_silver_searcher
@@ -40,17 +39,4 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
     sudo pip install virtualenvwrapper
     sudo pip install jedi
     sudo pip install flake8
-fi
-
-echo -n "Install haskell related tools? (y/N) => "; read haskell
-if [[ $haskell = "y" ]] || [[ $haskell = "Y" ]] ; then
-    brew install haskell-stack
-    stack setup
-    stack install hlint ghc-mod hdevtools
-fi
-
-echo -n "Install GO related tools? (y/N) => "; read go
-if [[ $go = "y" ]] || [[ $go = "Y" ]] ; then
-    brew install go --cross-compile-common
-    # go get -u github.com/golang/lint/golint
 fi
