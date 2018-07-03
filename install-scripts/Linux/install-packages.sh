@@ -94,7 +94,7 @@ else
 fi
 
 sudo apt-get -y install python3-pip
-if type -p pip > /dev/null; then
+if type -p pip3 > /dev/null; then
     echo "pip Installed" >> $log_file
 else
     echo "pip FAILED TO INSTALL!!!" >> $log_file
@@ -123,22 +123,22 @@ fi
 
 sudo apt-get -y install python3-dev
 
-sudo pip install virtualenvwrapper
-if pip freeze | grep virtualenvwrapper > /dev/null; then
+sudo pip3 install virtualenvwrapper
+if pip3 freeze | grep virtualenvwrapper > /dev/null; then
     echo "virtualenvwrapper Installed" >> $log_file
 else
     echo "virtualenvwrapper FAILED TO INSTALL!!!" >> $log_file
 fi
 
-sudo pip install jedi
-if pip freeze | grep jedi > /dev/null; then
+sudo pip3 install jedi
+if pip3 freeze | grep jedi > /dev/null; then
     echo "jedi Installed" >> $log_file
 else
     echo "jedi FAILED TO INSTALL!!!" >> $log_file
 fi
 
-sudo pip install flake8
-if pip freeze | grep flake8 > /dev/null; then
+sudo pip3 install flake8
+if pip3 freeze | grep flake8 > /dev/null; then
     echo "flake8 Installed" >> $log_file
 else
     echo "flake8 FAILED TO INSTALL!!!" >> $log_file

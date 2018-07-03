@@ -36,7 +36,7 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
     # Install pip and global pip packages
     # ===
     sudo easy_install pip
-    sudo pip install virtualenvwrapper
-    sudo pip install jedi
-    sudo pip install flake8
+    sudo pip3 install virtualenvwrapper
+    sudo pip3 install jedi
+    sudo pip3 install flake8
 fi
