@@ -33,6 +33,10 @@ export HISTCONTROL=ignoredups
 set -o noclobber
 export EDITOR=vim
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 #===============================================================================
 #  Aliases
 #===============================================================================
@@ -84,3 +88,5 @@ alias etf='ember t -s -f'
 alias ets='ember t -s -f scott'
 alias ni='npm install'
 alias mixclean='mix deps.clean --unused --unlock'
+alias python='python3'
+# export PATH='/usr/local/bin:/Users/snewcomer/.nvm/versions/node/v8.11.3/bin:/Users/snewcomer/.asdf/bin:/Users/snewcomer/.asdf/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'\n

@@ -72,39 +72,10 @@ echo "git-completion and git-prompt Installed and Configured" >> $log_file
 # Install node
 # ---
 cd ~/
-git clone https://github.com/joyent/node
-cd node
-sudo ./configure --prefix=/usr/local
-sudo make
-sudo make install
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+nvm install lts/carbon
+nvm alias default lts/carbon
 cd ~/
-sudo rm -r node # Remove the node folder in the home directory
-
-# node it seems is installed as nodejs in Mint if that
-# is the case we create a symlink to node
-if [[ (! -f /usr/bin/node) && (-f /usr/bin/nodejs) ]]; then
-    sudo ln -s /usr/bin/nodejs /usr/bin/node
-fi
-
-if type -p node > /dev/null; then
-    echo -n "Node version: "; echo -n `node --version`; echo " Installed" >> $log_file
-else
-    echo "node FAILED TO INSTALL!!!" >> $log_file
-fi
-
-sudo apt-get -y install npm
-if type -p npm > /dev/null; then
-    echo "npm Installed" >> $log_file
-else
-    echo "npm FAILED TO INSTALL!!!" >> $log_file
-fi
-
-sudo npm install -g jshint
-if type -p jshint > /dev/null; then
-    echo "jshint Installed" >> $log_file
-else
-    echo "jshint FAILED TO INSTALL!!!" >> $log_file
-fi
 
 curl http://beyondgrep.com/ack-2.08-single-file > ~/ack && chmod 0755 !#:3
 sudo mv ~/ack /usr/bin/ack
@@ -122,18 +93,11 @@ else
     echo "Silver searcher FAILED TO INSTALL!!!" >> $log_file
 fi
 
-sudo apt-get -y install python-pip
+sudo apt-get -y install python3-pip
 if type -p pip > /dev/null; then
     echo "pip Installed" >> $log_file
 else
     echo "pip FAILED TO INSTALL!!!" >> $log_file
-fi
-
-sudo apt-get -y install bpython
-if type -p bpython > /dev/null; then
-    echo "bpython Installed" >> $log_file
-else
-    echo "bpython FAILED TO INSTALL!!!" >> $log_file
 fi
 
 sudo apt-get -y install bpython3
@@ -157,7 +121,7 @@ else
     echo "tmux FAILED TO INSTALL!!!" >> $log_file
 fi
 
-sudo apt-get -y install python-dev
+sudo apt-get -y install python3-dev
 
 sudo pip install virtualenvwrapper
 if pip freeze | grep virtualenvwrapper > /dev/null; then
@@ -186,5 +150,5 @@ fi
 echo -e "\n====== Summary ======\n"
 cat $log_file
 echo
-echo "Enjoy -Jarrod"
+echo "Enjoy -Scott"
 rm $log_file
