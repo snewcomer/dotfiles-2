@@ -144,6 +144,9 @@ else
     echo "flake8 FAILED TO INSTALL!!!" >> $log_file
 fi
 
+sudo apt-get -y install automake autoconf m4 libncurses5-dev libssl-dev unixodbc-dev
+sudo apt-get -y xsltproc fop
+
 #==============
 # Give the user a summary of what has been installed
 #==============

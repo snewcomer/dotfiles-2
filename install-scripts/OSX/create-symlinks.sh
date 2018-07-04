@@ -70,4 +70,4 @@ chsh -s /bin/zsh
 #==============
 echo -e "\n====== All Done!! ======\n"
 echo
-echo "Enjoy -Jarrod"
+echo "Enjoy -Scott"
