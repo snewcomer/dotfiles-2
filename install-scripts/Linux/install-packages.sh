@@ -72,9 +72,8 @@ echo "git-completion and git-prompt Installed and Configured" >> $log_file
 # Install node
 # ---
 cd ~/
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-nvm install lts/carbon
-nvm alias default lts/carbon
+curl https://get.volta.sh | bash
+volta install node
 cd ~/
 
 curl http://beyondgrep.com/ack-2.08-single-file > ~/ack && chmod 0755 !#:3

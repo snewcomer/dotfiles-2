@@ -12,5 +12,8 @@
 [user]
 	name = snewcomer
 	email = snewcomer24@gmail.com
+[includeIf "gitdir:~/Github/web-experience-app/"]
+	name = snewcomer
+	email = snewcomer@apple.com
 [push]
 	default = current

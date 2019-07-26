@@ -31,12 +31,4 @@ if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
     # ===
     brew install ctags
     sudo mv /usr/bin/ctags /usr/bin/ctags_orig
-
-    # ===
-    # Install pip and global pip packages
-    # ===
-    sudo easy_install pip
-    sudo pip3 install virtualenvwrapper
-    sudo pip3 install jedi
-    sudo pip3 install flake8
 fi
